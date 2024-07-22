@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>Welcome!</h1>
+    <a href="new">Add a new message</a>
+    <h2>Message board:</h2>
+    <% messages.forEach(message => { %>
+    <div>
+      <h2><%= message.user %>&apos;s message:</h2>
+      <p><%= message.text %></p>
+      <span>Added: <%= message.added.toLocaleString() %></span>
+      <hr />
+    </div>
+    <% }) %>
+  </body>
+</html>
